@@ -1,0 +1,16 @@
+﻿@model ProjectWork.Models.Taglia;
+
+@{
+    ViewData["Title"] = "Modifica Taglia";
+}
+
+<h2>Modifica Taglia</h2>
+
+
+<form action="/Taglia/Update/">
+    <input type="hidden" name="id" value="@Model.Id" />
+    <input type="text" placeholder="Nome.." name="nome" value="@Model.Nome" /><br />
+    <br />
+    <input type="submit" value="Salva" />
+
+</form>

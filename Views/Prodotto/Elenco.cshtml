@@ -1,0 +1,22 @@
+﻿@model List<ProjectWork.Models.Prodotto>;
+
+@{
+    ViewData["Title"] = "Prodotti";
+}
+
+<p>
+    <a href="/Prodotto/FormNuovoProdotto/">AGGIUNGI</a>
+</p>
+
+@foreach (var p in Model)
+{
+    <p>Nome: <a href="/Prodotto/Dettagli/@p.Id">@p.Nome</a></p>
+    <p>Categoria: @p.Categoria</p>
+    <p>Prezzo: @p.Prezzo</p>
+
+    <p>
+        <a href="/Prodotto/FormModificaProdotto/@p.Id">MODIFICA</a>
+        <a href="/Prodotto/Elimina/@p.Id">ELIMINA</a>
+    </p>
+    <hr />
+}

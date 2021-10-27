@@ -1,0 +1,20 @@
+﻿@model List<ProjectWork.Models.Colore>;
+
+@{
+    ViewData["Title"] = "Colori";
+}
+
+<p>
+    <a href="/Colore/FormNuovoColore/">AGGIUNGI NUOVO</a>
+</p>
+
+@foreach (var p in Model)
+{
+
+    <p>Nome: @p.Nome</p>
+    <p>
+        <a href="/Colore/FormModificaColore/@p.Id">MODIFICA</a>
+        <a href="/Colore/Elimina/@p.Id">ELIMINA</a>
+    </p>
+    <hr />
+}

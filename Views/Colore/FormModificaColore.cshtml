@@ -1,0 +1,16 @@
+﻿@model ProjectWork.Models.Colore;
+
+@{
+    ViewData["Title"] = "Modifica colore";
+}
+
+<h2>Modifica colore</h2>
+
+
+<form action="/colore/Update/">
+    <input type="hidden" name="id" value="@Model.Id" />
+    <input type="text" placeholder="Nome.." name="nome" value="@Model.Nome" /><br />
+    <br />
+    <input type="submit" value="Salva" />
+
+</form>

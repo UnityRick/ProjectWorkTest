@@ -1,0 +1,24 @@
+﻿@model List<ProjectWork.Models.Quantita>;
+
+@{
+    ViewData["Title"] = "Prodotti";
+}
+
+<p>
+    <a href="/Quantita/FormNuovaQuantita/">AGGIUNGI</a>
+</p>
+
+@foreach (var p in Model)
+{
+    <p>Nome: <a href="/Quantita/Dettagli/@p.ProdottoId&@p.ColoreId&@p.TagliaId">@p.Prodotti.Nome</a></p>
+    <p>Prezzo: @p.Prodotti.Prezzo</p>
+    <p>Taglia: @p.Taglie.Nome</p>
+    <p>Colore: @p.Colori.Nome</p>
+    <p>Quantità: @p.Quantitativo</p>
+
+    <p>
+        <a href="/Quantita/FormModificaQuantita/@p.ProdottoId&@p.ColoreId&@p.TagliaId">MODIFICA</a>
+        <a href="/Quantita/Elimina/@p.ProdottoId&@p.ColoreId&@p.TagliaId">ELIMINA</a>
+    </p>
+    <hr />
+}
